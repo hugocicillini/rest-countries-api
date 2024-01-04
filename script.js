@@ -15,6 +15,7 @@ async function getCountry() {
     });
 }
 getCountry()
+
 function showCountry(data) {
     const country = document.createElement("div");
     country.classList.add("country");
@@ -62,7 +63,6 @@ searchInput.addEventListener("input", (event) => {
 });
 
 btnMode.addEventListener('click', () => {
-
     const nav = document.querySelector(".nav")
     const footer = document.querySelector(".footer")
 
@@ -90,5 +90,4 @@ btnMode.addEventListener('click', () => {
     }
 
     toggleText();
-
 })

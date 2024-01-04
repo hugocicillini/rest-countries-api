@@ -205,6 +205,7 @@ footer a {
         display: grid;
         grid-template-columns: 1fr;
     }
+
     .search-menu {
         flex-direction: column;
         gap: 1rem;
