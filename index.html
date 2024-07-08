@@ -2,57 +2,61 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 
-    <!-- Icons -->
-    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css'>
+  <!-- Icons -->
+  <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css'>
 
-    <!-- Style -->
-    <link rel="stylesheet" href="style.css">
+  <!-- Style -->
+  <link rel="stylesheet" href="style.css">
 
-    <!-- Script -->
-    <script defer src="script.js"></script>
+  <!-- Script -->
+  <script defer src="script.js"></script>
 
-    <title>API Countries</title>
+  <title>API Countries</title>
 </head>
 
 <body>
-    <header>
-        <nav class="nav">
-            <h1>Where in the World?</h1>
-            <div class="dark-mode">
-                <i class='bx bxs-moon bx-sm'></i>
-                <button class="btn-mode">Light Mode</button>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <div class="search-menu">
-                <div class="search-bar">
-                    <i class='bx bx-search-alt-2 bx-sm search-glass'></i>
-                    <input type="text" id="search-input" placeholder="Search For Country">
-                </div>
-                <select id="select-region">
-                    <option value="Default" disabled selected hidden>Find By Region</option>
-                    <option class="region-name" value="All">All</option>
-                    <option class="region-name" value="Africa">Africa</option>
-                    <option class="region-name" value="America">America</option>
-                    <option class="region-name" value="Asia">Asia</option>
-                    <option class="region-name" value="Europe">Europe</option>
-                    <option class="region-name" value="Oceania">Oceania</option>
-                </select>
-            </div>
+  <header>
+    <nav class="nav">
+      <h1>Onde no Mundo?</h1>
+      <div class="dark-mode">
+        <i class='bx bxs-moon bx-sm'></i>
+        <button class="btn-mode">Light Mode</button>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <div class="search-menu">
+        <div class="search-bar">
+          <i class='bx bx-search-alt-2 bx-sm search-glass'></i>
+          <div>
+            <input type="text" id="search-input" placeholder="Procurar...">
+            <i class='bx bx-trash bx-sm' id="search-delete"></i>
+          </div>
+        </div>
+        <select id="select-region">
+          <option value="Default" disabled selected hidden>Todos</option>
+          <option class="region-name" value="All">Todos</option>
+          <option class="region-name" value="Africa">África</option>
+          <option class="region-name" value="America">América</option>
+          <option class="region-name" value="Asia">Ásia</option>
+          <option class="region-name" value="Europe">Europa</option>
+          <option class="region-name" value="Oceania">Oceania</option>
+        </select>
+      </div>
 
-            <div class="countries"></div>
-        </section>
-    </main>
-    <footer class="footer">
-        <p>Produzido por: <a href="https://github.com/hugocicillini" target="_blank" alt="developer">hugocicillini</a>
-        </p>
-    </footer>
+      <div class="countries"></div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>Desenvolvido por: <a href="https://github.com/hugocicillini" target="_blank" alt="developer">hugocicillini</a>
+    </p>
+  </footer>
 </body>
 
 </html>
