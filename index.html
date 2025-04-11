@@ -1,62 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+    />
 
-  <!-- Icons -->
-  <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css'>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+    />
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css" />
 
-  <!-- Style -->
-  <link rel="stylesheet" href="style.css">
+    <!-- Script -->
+    <script defer src="script.js"></script>
 
-  <!-- Script -->
-  <script defer src="script.js"></script>
+    <title>API Countries</title>
+  </head>
 
-  <title>API Countries</title>
-</head>
-
-<body>
-  <header>
-    <nav class="nav">
-      <h1>Onde no Mundo?</h1>
-      <div class="dark-mode">
-        <i class='bx bxs-moon bx-sm'></i>
-        <button class="btn-mode">Light Mode</button>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <section>
-      <div class="search-menu">
-        <div class="search-bar">
-          <i class='bx bx-search-alt-2 bx-sm search-glass'></i>
-          <div>
-            <input type="text" id="search-input" placeholder="Procurar...">
-            <i class='bx bx-trash bx-sm' id="search-delete"></i>
+  <body>
+    <header>
+      <nav class="nav">
+        <h1>Onde no Mundo?</h1>
+        <div class="dark-mode button">
+          <i class="bx bxs-moon bx-xm"></i>
+          <button class="btn-mode">Light Mode</button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <div class="search-menu">
+          <div class="search-bar">
+            <div class="field has-addons">
+              <p class="control is-normal">
+                <input
+                  class="input"
+                  type="text"
+                  id="search-input"
+                  placeholder="Procurar..."
+                />
+              </p>
+              <p class="control">
+                <button class="button" id="search-delete">
+                  <span class="icon">
+                    <i class="bx bx-trash"></i>
+                  </span>
+                </button>
+              </p>
+            </div>
+          </div>
+          <div class="select is-normal">
+            <select id="select-region">
+              <option class="region-name" value="All">Todos</option>
+              <option class="region-name" value="Africa">África</option>
+              <option class="region-name" value="Americas">América</option>
+              <option class="region-name" value="Asia">Ásia</option>
+              <option class="region-name" value="Europe">Europa</option>
+              <option class="region-name" value="Oceania">Oceania</option>
+            </select>
           </div>
         </div>
-        <select id="select-region">
-          <option value="Default" disabled selected hidden>Todos</option>
-          <option class="region-name" value="All">Todos</option>
-          <option class="region-name" value="Africa">África</option>
-          <option class="region-name" value="America">América</option>
-          <option class="region-name" value="Asia">Ásia</option>
-          <option class="region-name" value="Europe">Europa</option>
-          <option class="region-name" value="Oceania">Oceania</option>
-        </select>
+
+        <div class="countries"></div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          Desenvolvido por:
+          <a
+            href="https://github.com/hugocicillini"
+            target="_blank"
+            alt="developer"
+            >hugocicillini</a
+          >
+        </p>
       </div>
-
-      <div class="countries"></div>
-    </section>
-  </main>
-  <footer class="footer">
-    <p>Desenvolvido por: <a href="https://github.com/hugocicillini" target="_blank" alt="developer">hugocicillini</a>
-    </p>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>
