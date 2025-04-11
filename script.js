@@ -297,15 +297,21 @@ function setUniformCardHeight() {
   const cards = document.querySelectorAll('.country');
   let maxHeight = 0;
 
-  cards.forEach((card) => {
-    card.style.height = 'auto';
-    const cardHeight = card.offsetHeight;
-    if (cardHeight > maxHeight) {
-      maxHeight = cardHeight;
-    }
-  });
+  if (window.innerWidth > 768) {
+    cards.forEach((card) => {
+      card.style.height = 'auto';
+      const cardHeight = card.offsetHeight;
+      if (cardHeight > maxHeight) {
+        maxHeight = cardHeight;
+      }
+    });
 
-  cards.forEach((card) => {
-    card.style.height = `${maxHeight}px`;
-  });
+    cards.forEach((card) => {
+      card.style.height = `${maxHeight}px`;
+    });
+  } else {
+    cards.forEach((card) => {
+      card.style.height = 'auto';
+    });
+  }
 }
